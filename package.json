@@ -1,0 +1,29 @@
+{
+  "name": "report-system-api",
+  "version": "0.9.8",
+  "description": "RESTful API for managing issues",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "doc": "apidoc -i app/apis -o apidoc"
+  },
+  "author": "Fran Vargas",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "jsonwebtoken": "^7.4.0",
+    "moment": "^2.18.1",
+    "mongodb": "^2.2.26",
+    "mongoose": "^4.9.4",
+    "morgan": "^1.8.1",
+    "password-hash": "^1.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "apidoc": {
+    "title": "Report System API"
+  }
+}

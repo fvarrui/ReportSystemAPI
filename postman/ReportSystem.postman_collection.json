@@ -1,0 +1,464 @@
+{
+	"variables": [],
+	"info": {
+		"name": "ReportSystem",
+		"_postman_id": "53184190-c68d-2645-0509-3d33a216d64f",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Issues API",
+			"description": "",
+			"item": [
+				{
+					"name": "get all issues",
+					"request": {
+						"url": "http://localhost:8080/api/issue",
+						"method": "GET",
+						"header": [
+							{
+								"key": "//auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZ2YXJydWkiLCJyb2xlIjoiTWFuYWdlciIsImlhdCI6MTQ5NTcwNzU5MiwiZXhwIjoxNDk1NzkzOTkyfQ.b108Jb_oZpzJVg5us7jI261KnPxPxU7fO22HmWPD_vU",
+								"description": "",
+								"disabled": true
+							},
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZ0b2Jvc28iLCJyb2xlIjoiRW1wbG95ZWUiLCJpYXQiOjE0OTU3MDgxNDEsImV4cCI6MTQ5NTc5NDU0MX0.tW82ik9tHpZYN40U9_ZUCfxgqL1hX3t8_svIgq0dLkQ",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "get all issues"
+					},
+					"response": []
+				},
+				{
+					"name": "get a single issue by number",
+					"request": {
+						"url": "http://localhost:8080/api/issue/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZ2YXJydWkiLCJyb2xlIjoiTWFuYWdlciIsImlhdCI6MTQ5NTc4OTA2NCwiZXhwIjoxNDk1ODc1NDY0fQ.tPxKWNZzSjt5l7UPuNXrWkZLwDXcsShvPqMgvK4ptDc",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "add an issue",
+					"request": {
+						"url": "http://localhost:8080/api/issue",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZ2YXJydWkiLCJyb2xlIjoiTWFuYWdlciIsImlhdCI6MTQ5NTcwNzU5MiwiZXhwIjoxNDk1NzkzOTkyfQ.b108Jb_oZpzJVg5us7jI261KnPxPxU7fO22HmWPD_vU",
+								"description": ""
+							},
+							{
+								"key": "//auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZ0b2Jvc28iLCJyb2xlIjoiRW1wbG95ZWUiLCJpYXQiOjE0OTU3MTkwNTIsImV4cCI6MTQ5NTgwNTQ1Mn0.wGetToB9wbDxBO4GnMv_i6Sn6to7QX100aIacccgrzQ",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"esta es para toboso\",\n    \"description\" : \"el frontend falla cuando esto y lo otro\",\n    \"tags\": [ \"fallo\", \"muy\", \"grave\" ],\n  \t\"assignedTo\": \"592575715c6a5004d0fe3a04\",\n    \"tarari\": \"que te vi\",\n    \"_comment\" : {\n    \t\"assignedTo\": \"59241c6f8acd3d03ae95dca7\"\n    }\n}"
+						},
+						"description": "get all issues"
+					},
+					"response": []
+				},
+				{
+					"name": "search issues",
+					"request": {
+						"url": "http://localhost:8080/api/issue/search/gravi",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "//auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZ2YXJydWkiLCJyb2xlIjoiTWFuYWdlciIsImlhdCI6MTQ5NTcwNzU5MiwiZXhwIjoxNDk1NzkzOTkyfQ.b108Jb_oZpzJVg5us7jI261KnPxPxU7fO22HmWPD_vU",
+								"description": "",
+								"disabled": true
+							},
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZ0b2Jvc28iLCJyb2xlIjoiRW1wbG95ZWUiLCJpYXQiOjE0OTU3MTkwNTIsImV4cCI6MTQ5NTgwNTQ1Mn0.wGetToB9wbDxBO4GnMv_i6Sn6to7QX100aIacccgrzQ",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "get all issues"
+					},
+					"response": []
+				},
+				{
+					"name": "update issue as manager",
+					"request": {
+						"url": "http://localhost:8080/api/issue/3",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZ2YXJydWkiLCJyb2xlIjoiTWFuYWdlciIsImlhdCI6MTQ5NTcwNzU5MiwiZXhwIjoxNDk1NzkzOTkyfQ.b108Jb_oZpzJVg5us7jI261KnPxPxU7fO22HmWPD_vU",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"assignedTo\": null\n}"
+						},
+						"description": "get all issues"
+					},
+					"response": []
+				},
+				{
+					"name": "remove issue as manager",
+					"request": {
+						"url": "http://localhost:8080/api/issue/4",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "//auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZ2YXJydWkiLCJyb2xlIjoiTWFuYWdlciIsImlhdCI6MTQ5NTcwNzU5MiwiZXhwIjoxNDk1NzkzOTkyfQ.b108Jb_oZpzJVg5us7jI261KnPxPxU7fO22HmWPD_vU",
+								"description": "",
+								"disabled": true
+							},
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZ0b2Jvc28iLCJyb2xlIjoiRW1wbG95ZWUiLCJpYXQiOjE0OTU3MTkwNTIsImV4cCI6MTQ5NTgwNTQ1Mn0.wGetToB9wbDxBO4GnMv_i6Sn6to7QX100aIacccgrzQ",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "get all issues"
+					},
+					"response": []
+				},
+				{
+					"name": "update issue status as employee",
+					"request": {
+						"url": "http://localhost:8080/api/issue/1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZ0b2Jvc28iLCJyb2xlIjoiRW1wbG95ZWUiLCJpYXQiOjE0OTU3ODkyMTIsImV4cCI6MTQ5NTg3NTYxMn0.tpKBUVklOE5S7x1L4VZ8zNqamiztx3aTUM44_sttuAA",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"tags\" : [ \"tarari\", \"que\", \"te\", \"vi\" ]\n}"
+						},
+						"description": "get all issues"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users API",
+			"description": "",
+			"item": [
+				{
+					"name": "initialize",
+					"request": {
+						"url": "http://localhost:8080/api/user/init",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "login manager user (fvarrui)",
+					"request": {
+						"url": "http://localhost:8080/api/user/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n\t\"username\" : \"fvarrui\",\n\t\"password\" : \"1234\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "login employee user (ftoboso)",
+					"request": {
+						"url": "http://localhost:8080/api/user/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n\t\"username\" : \"ftoboso\",\n\t\"password\" : \"abcd\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "get all users",
+					"request": {
+						"url": "http://localhost:8080/api/user",
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZ2YXJydWkiLCJyb2xlIjoiTWFuYWdlciIsImlhdCI6MTQ5NTc4OTA2NCwiZXhwIjoxNDk1ODc1NDY0fQ.tPxKWNZzSjt5l7UPuNXrWkZLwDXcsShvPqMgvK4ptDc",
+								"description": ""
+							},
+							{
+								"key": "//auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZ0b2Jvc28iLCJyb2xlIjoiRW1wbG95ZWUiLCJpYXQiOjE0OTU0NTY1MDUsImV4cCI6MTQ5NTU0MjkwNX0.tlT35PRtUDHSRjbBu6dCVWZ3bTUA7T_WklISjFW2wUA",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "get user ftoboso",
+					"request": {
+						"url": "http://localhost:8080/api/user/ftoboso",
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZ2YXJydWkiLCJyb2xlIjoiTWFuYWdlciIsImlhdCI6MTQ5NTc4OTA2NCwiZXhwIjoxNDk1ODc1NDY0fQ.tPxKWNZzSjt5l7UPuNXrWkZLwDXcsShvPqMgvK4ptDc",
+								"description": ""
+							},
+							{
+								"key": "//auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZ0b2Jvc28iLCJyb2xlIjoiRW1wbG95ZWUiLCJpYXQiOjE0OTU2MjY5ODIsImV4cCI6MTQ5NTcxMzM4Mn0.Lo_48liq2omqX2e8a0-McquNeqEpOuwYd2yQhB1VtCw",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "get user fvarrui",
+					"request": {
+						"url": "http://localhost:8080/api/user/fvarrui",
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZ2YXJydWkiLCJyb2xlIjoiTWFuYWdlciIsImlhdCI6MTQ5NTUzODIwNywiZXhwIjoxNDk1NjI0NjA3fQ.L0-iz3FOMoB7cP7wXKaBxpjiwIjaDLHJShIx9-Qdd4I",
+								"description": ""
+							},
+							{
+								"key": "//auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZ0b2Jvc28iLCJyb2xlIjoiRW1wbG95ZWUiLCJpYXQiOjE0OTU1Mzg4MzYsImV4cCI6MTQ5NTYyNTIzNn0.t7erAS-st4324MQbejJm74yvAvqdZqIVhZVh1dZWnOo",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "update user fvarrui",
+					"request": {
+						"url": "http://localhost:8080/api/user/fvarrui",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZ2YXJydWkiLCJyb2xlIjoiTWFuYWdlciIsImlhdCI6MTQ5NTQ0NzUyNCwiZXhwIjoxNDk1NTMzOTI0fQ.lvf9oOvhQ6z3hVqU6rbSIvXhxdfs3NYKX5esdQh_TpI",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n\t\"realname\" : \"Fran Vargas\",\n\t\"email\" : \"francisco.vargas.ruiz@gmail.com\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "create user ftoboso",
+					"request": {
+						"url": "http://localhost:8080/api/user",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZ2YXJydWkiLCJyb2xlIjoiTWFuYWdlciIsImlhdCI6MTQ5NTUzNzU5NiwiZXhwIjoxNDk1NjIzOTk2fQ.O1Dkvn7SliQmb9S7dmBwGdJsThKczQ9jUswDPT8SIPE",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n\t\"username\" : \"ftoboso\",\n\t\"password\" : \"abcd\",\n\t\"realname\" : \"Fernando Toboso\",\n\t\"email\" : \"ftoblare@gmail.com\",\n\t\"role\" : \"Employee\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "create user apercab",
+					"request": {
+						"url": "http://localhost:8080/api/user",
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZ2YXJydWkiLCJyb2xlIjoiTWFuYWdlciIsImlhdCI6MTQ5NTYyNzA4NCwiZXhwIjoxNDk1NzEzNDg0fQ.RmWRW-Ohvev9_AsSv9bqqT0PSGs_LT0LqNleL1jpgE0",
+								"description": ""
+							},
+							{
+								"key": "//auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZ0b2Jvc28iLCJyb2xlIjoiRW1wbG95ZWUiLCJpYXQiOjE0OTU1Mzc3NjIsImV4cCI6MTQ5NTYyNDE2Mn0.E7JkfoHYcpxs5tRPX_6dCqdZGB_gjGDbR5jvbkNEt54",
+								"description": "",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n\t\"username\" : \"apercab\",\n\t\"password\" : \"c3p0\",\n\t\"realname\" : \"Angel Perez\",\n\t\"email\" : \"apercab@gmail.com\",\n\t\"role\" : \"Manager\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "remove user ftoboso",
+					"request": {
+						"url": "http://localhost:8080/api/user/ftoboso",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "//auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZ2YXJydWkiLCJyb2xlIjoiTWFuYWdlciIsImlhdCI6MTQ5NTUzODIwNywiZXhwIjoxNDk1NjI0NjA3fQ.L0-iz3FOMoB7cP7wXKaBxpjiwIjaDLHJShIx9-Qdd4I",
+								"description": "",
+								"disabled": true
+							},
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZ0b2Jvc28iLCJyb2xlIjoiRW1wbG95ZWUiLCJpYXQiOjE0OTU1MzgyNDMsImV4cCI6MTQ5NTYyNDY0M30.IbN0s_R2Idfpi97d9PXh5nx42qwgpiV0o1wpf5nBq8A",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "remove user apercab",
+					"request": {
+						"url": "http://localhost:8080/api/user/apercab",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZ2YXJydWkiLCJyb2xlIjoiTWFuYWdlciIsImlhdCI6MTQ5NTYyNzA4NCwiZXhwIjoxNDk1NzEzNDg0fQ.RmWRW-Ohvev9_AsSv9bqqT0PSGs_LT0LqNleL1jpgE0",
+								"description": ""
+							},
+							{
+								"key": "//auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZ0b2Jvc28iLCJyb2xlIjoiRW1wbG95ZWUiLCJpYXQiOjE0OTU1MzgyNDMsImV4cCI6MTQ5NTYyNDY0M30.IbN0s_R2Idfpi97d9PXh5nx42qwgpiV0o1wpf5nBq8A",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
