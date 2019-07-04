@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "doc": "apidoc -i app/apis -o apidoc"
+    "doc": "apidoc -i app/apis -o apidoc",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "Fran Vargas",
   "license": "ISC",
@@ -18,12 +20,14 @@
     "mongodb": "^2.2.26",
     "mongoose": "^4.9.4",
     "morgan": "^1.8.1",
-    "password-hash": "^1.2.2"
+    "password-hash": "^1.2.2",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
   },
   "apidoc": {
     "title": "Report System API"
-  }
+  },
+  "snyk": true
 }
