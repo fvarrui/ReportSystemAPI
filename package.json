@@ -15,8 +15,8 @@
     "express": "^4.15.2",
     "jsonwebtoken": "^7.4.0",
     "moment": "^2.18.1",
-    "mongodb": "^2.2.26",
-    "mongoose": "^4.9.4",
+    "mongodb": "^3.1.13",
+    "mongoose": "^5.4.10",
     "morgan": "^1.8.1",
     "password-hash": "^1.2.2"
   },
